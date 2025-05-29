@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for better looks with Tailwind */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        /* Style for number input arrows */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield; /* Firefox */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 p-4 md:p-8">
+    <div class="container mx-auto max-w-6xl bg-white p-6 sm:p-8 rounded-xl shadow-2xl">
+        <h1 class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 text-sky-600">Unit Converter</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-10 sm:mb-16">
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-5 text-sky-700">Length</h3>
+                <div class="mb-4">
+                    <label for="lengthInput" class="block text-sm font-medium text-gray-700 mb-1">Enter Value:</label>
+                    <input id="lengthInput" placeholder="Enter Value Here" type="number" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                </div>
+                <div class="mb-4">
+                    <label for="length" class="block text-sm font-medium text-gray-700 mb-1">From:</label>
+                    <select id="length" class="w-full p-2.5 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                        <option value="0.01">Centimeters</option>
+                        <option value="0.3048">Feet</option>
+                        <option value="0.0254">Inches</option>
+                        <option value="1000">Kilometers</option>
+                        <option value="1" selected>Meters</option>
+                        <option value="1609.344">Miles</option>
+                        <option value="0.001">Millimeter</option>
+                        <option value="0.9144">Yards</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="length2" class="block text-sm font-medium text-gray-700 mb-1">To:</label>
+                    <select id="length2" class="w-full p-2.5 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                        <option value="0.01">Centimeters</option>
+                        <option value="0.3048" selected>Feet</option>
+                        <option value="0.0254">Inches</option>
+                        <option value="1000">Kilometers</option>
+                        <option value="1">Meters</option>
+                        <option value="1609.344">Miles</option>
+                        <option value="0.001">Millimeter</option>
+                        <option value="0.9144">Yards</option>
+                    </select>
+                </div>
+                <button onclick="lengthConvert()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert</button>
+                <p id="lengthOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base">Result will appear here</p>
+            </div>
+
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-5 text-sky-700">Area</h3>
+                <div class="mb-4">
+                    <label for="AreaInput" class="block text-sm font-medium text-gray-700 mb-1">Enter Value:</label>
+                    <input id="AreaInput" placeholder="Enter Value Here" type="number" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                </div>
+                <div class="mb-4">
+                    <label for="Area" class="block text-sm font-medium text-gray-700 mb-1">From:</label>
+                    <select id="Area" class="w-full p-2.5 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                        <option value="4046.8564224" selected>Acres</option>
+                        <option value="10000">Hectares</option>
+                        <option value="0.09290304">Square Feet</option>
+                        <option value="1">Square Meters</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="Area2" class="block text-sm font-medium text-gray-700 mb-1">To:</label>
+                    <select id="Area2" class="w-full p-2.5 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                        <option value="4046.8564224">Acres</option>
+                        <option value="10000" selected>Hectares</option>
+                        <option value="0.09290304">Square Feet</option>
+                        <option value="1">Square Meters</option>
+                    </select>
+                </div>
+                <button onclick="areaConvert()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert</button>
+                <p id="AreaOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base">Result will appear here</p>
+            </div>
+
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-5 text-sky-700">Volume</h3>
+                <div class="mb-4">
+                    <label for="VolumeInput" class="block text-sm font-medium text-gray-700 mb-1">Enter Value:</label>
+                    <input id="VolumeInput" placeholder="Enter Value Here" type="number" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                </div>
+                <div class="mb-4">
+                    <label for="Volume" class="block text-sm font-medium text-gray-700 mb-1">From:</label>
+                    <select id="Volume" class="w-full p-2.5 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                        <option value="1233.48185532" selected>Acre Feet</option>
+                        <option value="1">Cubic Meters</option>
+                        <option value="0.003785411784">Gallons [US]</option>
+                        <option value="0.00454609">Gallons [Imperial]</option>
+                        <option value="0.001">Litres</option>
+                        <option value="0.000001">Milliliters</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="Volume2" class="block text-sm font-medium text-gray-700 mb-1">To:</label>
+                    <select id="Volume2" class="w-full p-2.5 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                        <option value="1233.48185532">Acre Feet</option>
+                        <option value="1" selected>Cubic Meters</option>
+                        <option value="0.003785411784">Gallons [US]</option>
+                        <option value="0.00454609">Gallons [Imperial]</option>
+                        <option value="0.001">Litres</option>
+                        <option value="0.000001">Milliliters</option>
+                    </select>
+                </div>
+                <button onclick="volumeConvert()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert</button>
+                <p id="VolumeOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base">Result will appear here</p>
+            </div>
+
+            <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-5 text-sky-700">Flowrate</h3>
+                <div class="mb-4">
+                    <label for="FlowrateInput" class="block text-sm font-medium text-gray-700 mb-1">Enter Value:</label>
+                    <input id="FlowrateInput" placeholder="Enter Value Here" type="number" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                </div>
+                <div class="mb-4">
+                    <label for="Flowrate" class="block text-sm font-medium text-gray-700 mb-1">From:</label>
+                    <select id="Flowrate" class="w-full p-2.5 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                        <option value="0.00003908668" selected>Acre Feet/Year</option>
+                        <option value="0.01427641018">Acre Feet/Day</option>
+                        <option value="0.34263384444">Acre Feet/Hour</option>
+                        <option value="20.55803066666667">Acre Feet/Minute</option>
+                        <option value="1233.48184">Acre Feet/Second</option>
+                        <option value="3.16880767e-8">Cubic Meters/Year</option>
+                        <option value="0.00001157407">Cubic Meters/Day</option>
+                        <option value="0.00027777777">Cubic Meters/Hour</option>
+                        <option value="0.01666666666">Cubic Meters/Minute</option>
+                        <option value="1">Cubic Meters/Second</option>
+                        <option value="1.440569e-10">Gallon/Year [Imperial]</option>
+                        <option value="5.26167824e-8">Gallon/Day [Imperial]</option>
+                        <option value="0.0000012628">Gallon/Hour [Imperial]</option>
+                        <option value="0.00007576816">Gallon/Minute [Imperial]</option>
+                        <option value="0.00454609">Gallon/Second [Imperial]</option>
+                        <option value="1.1995246e-10">Gallon/Year [US]</option>
+                        <option value="4.38126364e-8">Gallon/Day [US]</option>
+                        <option value="0.0000010515">Gallon/Hour [US]</option>
+                        <option value="0.00006309019">Gallon/Minute [US]</option>
+                        <option value="0.003785411784">Gallon/Second [US]</option>
+                        <option value="3.1688088e-11">Litre/Year</option>
+                        <option value="1.15740741e-8">Litre/Day</option>
+                        <option value="2.77777778e-7">Litre/Hour</option>
+                        <option value="0.00001666666">Litre/Minute</option>
+                        <option value="0.001">Litre/Second</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="Flowrate2" class="block text-sm font-medium text-gray-700 mb-1">To:</label>
+                    <select id="Flowrate2" class="w-full p-2.5 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                        <option value="0.00003908668">Acre Feet/Year</option>
+                        <option value="0.01427641018">Acre Feet/Day</option>
+                        <option value="0.34263384444">Acre Feet/Hour</option>
+                        <option value="20.55803066666667">Acre Feet/Minute</option>
+                        <option value="1233.48184">Acre Feet/Second</option>
+                        <option value="3.16880767e-8">Cubic Meters/Year</option>
+                        <option value="0.00001157407" selected>Cubic Meters/Day</option>
+                        <option value="0.00027777777">Cubic Meters/Hour</option>
+                        <option value="0.01666666666">Cubic Meters/Minute</option>
+                        <option value="1">Cubic Meters/Second</option>
+                        <option value="1.440569e-10">Gallon/Year [Imperial]</option>
+                        <option value="5.26167824e-8">Gallon/Day [Imperial]</option>
+                        <option value="0.0000012628">Gallon/Hour [Imperial]</option>
+                        <option value="0.00007576816">Gallon/Minute [Imperial]</option>
+                        <option value="0.00454609">Gallon/Second [Imperial]</option>
+                        <option value="1.1995246e-10">Gallon/Year [US]</option>
+                        <option value="4.38126364e-8">Gallon/Day [US]</option>
+                        <option value="0.0000010515">Gallon/Hour [US]</option>
+                        <option value="0.00006309019">Gallon/Minute [US]</option>
+                        <option value="0.003785411784">Gallon/Second [US]</option>
+                        <option value="3.1688088e-11">Litre/Year</option>
+                        <option value="1.15740741e-8">Litre/Day</option>
+                        <option value="2.77777778e-7">Litre/Hour</option>
+                        <option value="0.00001666666">Litre/Minute</option>
+                        <option value="0.001">Litre/Second</option>
+                    </select>
+                </div>
+                <button onclick="flowrateConvert()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert</button>
+                <p id="FlowrateOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base">Result will appear here</p>
+            </div>
+        </div>
+
+        <div class="mb-10 sm:mb-16">
+            <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-center text-sky-600">Latitude & Longitude</h2>
+            <p class="text-xs sm:text-sm text-center text-gray-500 mb-6 sm:mb-8"><em>*Only North American coordinates (positive Latitude, positive Longitude for West) will be correctly converted between formats.</em></p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-5 text-sky-700">Latitude (North)</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Minute Seconds (DMS)</label>
+                            <div class="flex space-x-2 items-center mt-1">
+                                <input id="degrees" placeholder="Deg (0-90)" type="number" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="minutes" placeholder="Min (0-59)" type="number" step="any" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="seconds" placeholder="Sec (0-59.99)" type="number" step="any" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Decimal Minutes (DDM)</label>
+                            <div class="flex space-x-2 items-center mt-1">
+                                <input id="decimal" placeholder="Deg (0-90)" type="number" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="minutesDD" placeholder="Dec Min (0-59.9999)" type="number" step="any" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="ddLati" class="block text-sm font-medium text-gray-700 mb-1">Decimal Degrees (DD)</label>
+                            <input id="ddLati" placeholder="Dec Deg (0-90.000000)" type="number" step="any" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow mt-1">
+                        </div>
+                    </div>
+                    <button id="clearLatitude" class="mt-6 w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md">Clear Latitude</button>
+                </div>
+
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-5 text-sky-700">Longitude (West)</h3>
+                    <div class="space-y-4">
+                         <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Minute Seconds (DMS)</label>
+                            <div class="flex space-x-2 items-center mt-1">
+                                <input id="degreesLong" placeholder="Deg (0-180)" type="number" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="minutesLong" placeholder="Min (0-59)" type="number" step="any" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="secondsLong" placeholder="Sec (0-59.99)" type="number" step="any" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Decimal Minutes (DDM)</label>
+                            <div class="flex space-x-2 items-center mt-1">
+                                <input id="decimalDdmLong" placeholder="Deg (0-180)" type="number" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="minutesDdmLong" placeholder="Dec Min (0-59.9999)" type="number" step="any" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="ddLong" class="block text-sm font-medium text-gray-700 mb-1">Decimal Degrees (DD)</label>
+                            <input id="ddLong" placeholder="Dec Deg (0-180.000000)" type="number" step="any" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow mt-1">
+                        </div>
+                    </div>
+                    <button id="clearLongitude" class="mt-6 w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md">Clear Longitude</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Standard unit conversion functions
+        function lengthConvert() {
+            const inputEl = document.getElementById("lengthInput");
+            const fromUnitEl = document.getElementById("length");
+            const toUnitEl = document.getElementById("length2");
+            const outputEl = document.getElementById("lengthOutput");
+
+            const inputValue = parseFloat(inputEl.value);
+            const fromUnitValue = parseFloat(fromUnitEl.value);
+            const fromUnitText = fromUnitEl.options[fromUnitEl.selectedIndex].text;
+            const toUnitValue = parseFloat(toUnitEl.value);
+            const toUnitText = toUnitEl.options[toUnitEl.selectedIndex].text;
+
+            if (isNaN(inputValue)) {
+                outputEl.innerHTML = "Please enter a valid number.";
+                return;
+            }
+            const result = (inputValue * fromUnitValue) / toUnitValue;
+            outputEl.innerHTML = `${inputValue.toLocaleString()} ${fromUnitText} = ${result.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 5})} ${toUnitText}`;
+        }
+
+        function areaConvert() {
+            const inputEl = document.getElementById("AreaInput");
+            const fromUnitEl = document.getElementById("Area");
+            const toUnitEl = document.getElementById("Area2");
+            const outputEl = document.getElementById("AreaOutput");
+
+            const inputValue = parseFloat(inputEl.value);
+            const fromUnitValue = parseFloat(fromUnitEl.value);
+            const fromUnitText = fromUnitEl.options[fromUnitEl.selectedIndex].text;
+            const toUnitValue = parseFloat(toUnitEl.value);
+            const toUnitText = toUnitEl.options[toUnitEl.selectedIndex].text;
+            
+            if (isNaN(inputValue)) {
+                outputEl.innerHTML = "Please enter a valid number.";
+                return;
+            }
+            const result = (inputValue * fromUnitValue) / toUnitValue;
+            outputEl.innerHTML = `${inputValue.toLocaleString()} ${fromUnitText} = ${result.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 5})} ${toUnitText}`;
+        }
+
+        function volumeConvert() {
+            const inputEl = document.getElementById("VolumeInput");
+            const fromUnitEl = document.getElementById("Volume");
+            const toUnitEl = document.getElementById("Volume2");
+            const outputEl = document.getElementById("VolumeOutput");
+
+            const inputValue = parseFloat(inputEl.value);
+            const fromUnitValue = parseFloat(fromUnitEl.value);
+            const fromUnitText = fromUnitEl.options[fromUnitEl.selectedIndex].text;
+            const toUnitValue = parseFloat(toUnitEl.value);
+            const toUnitText = toUnitEl.options[toUnitEl.selectedIndex].text;
+
+            if (isNaN(inputValue)) {
+                outputEl.innerHTML = "Please enter a valid number.";
+                return;
+            }
+            const result = (inputValue * fromUnitValue) / toUnitValue;
+            outputEl.innerHTML = `${inputValue.toLocaleString()} ${fromUnitText} = ${result.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 5})} ${toUnitText}`;
+        }
+
+        function flowrateConvert() {
+            const inputEl = document.getElementById("FlowrateInput");
+            const fromUnitEl = document.getElementById("Flowrate");
+            const toUnitEl = document.getElementById("Flowrate2");
+            const outputEl = document.getElementById("FlowrateOutput");
+            
+            const inputValue = parseFloat(inputEl.value);
+            const fromUnitValue = parseFloat(fromUnitEl.value);
+            const fromUnitText = fromUnitEl.options[fromUnitEl.selectedIndex].text;
+            const toUnitValue = parseFloat(toUnitEl.value);
+            const toUnitText = toUnitEl.options[toUnitEl.selectedIndex].text;
+
+            if (isNaN(inputValue)) {
+                outputEl.innerHTML = "Please enter a valid number.";
+                return;
+            }
+            const result = (inputValue * fromUnitValue) / toUnitValue;
+            // Using more precision for flowrate as values can be very small
+            outputEl.innerHTML = `${inputValue.toLocaleString()} ${fromUnitText} = ${result.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 10})} ${toUnitText}`;
+        }
+
+        // Latitude and Longitude conversion logic
+        window.addEventListener("load", function() {
+            // State variables for Lat/Long, using original short names to ensure logic matches
+            var b; // Stores latitude degrees for DMS/DDM calculations
+            var e = 0; // Stores latitude minutes for DMS calculations
+            var g; // Stores longitude degrees for DMS/DDM calculations
+            var c = 0; // Stores longitude minutes for DMS calculations
+
+            // Helper functions for coordinate conversion
+            function minutesDDM(val) { // Extracts integer minutes from DD
+                return parseInt((val - parseInt(val)) * 60);
+            }
+            function secondsDDm(val) { // Extracts seconds with decimals from DD
+                return ((((val - parseInt(val)) * 60) - parseInt((val - parseInt(val)) * 60)) * 60);
+            }
+
+            // --- Latitude Event Listeners ---
+            const degreesLat = document.getElementById("degrees");
+            const minutesLat = document.getElementById("minutes");
+            const secondsLat = document.getElementById("seconds");
+            const decimalLat = document.getElementById("decimal"); // DDM Degrees
+            const minutesDDLat = document.getElementById("minutesDD"); // DDM Decimal Minutes
+            const ddLati = document.getElementById("ddLati"); // DD Latitude
+
+            degreesLat.addEventListener("input", function() {
+                b = parseFloat(this.value) || 0;
+                decimalLat.value = b;
+                // Update DD based on current DMS
+                const currentMinutes = parseFloat(minutesLat.value) || 0;
+                const currentSeconds = parseFloat(secondsLat.value) || 0;
+                ddLati.value = (b + (currentMinutes / 60) + (currentSeconds / 3600)).toFixed(6);
+            });
+
+            minutesLat.addEventListener("input", function() {
+                e = parseFloat(this.value) || 0;
+                // Update DDM based on current DMS
+                const currentSeconds = parseFloat(secondsLat.value) || 0;
+                minutesDDLat.value = (e + (currentSeconds / 60)).toFixed(4);
+                // Update DD based on current DMS
+                const currentDegrees = parseFloat(degreesLat.value) || 0;
+                ddLati.value = (currentDegrees + (e / 60) + (currentSeconds / 3600)).toFixed(6);
+            });
+
+            secondsLat.addEventListener("input", function() {
+                const currentSeconds = parseFloat(this.value) || 0;
+                // Update DDM based on current DMS
+                const currentMinutes = parseFloat(minutesLat.value) || 0;
+                minutesDDLat.value = (currentMinutes + (currentSeconds / 60)).toFixed(4);
+                // Update DD based on current DMS
+                const currentDegrees = parseFloat(degreesLat.value) || 0;
+                ddLati.value = (currentDegrees + (currentMinutes / 60) + (currentSeconds / 3600)).toFixed(6);
+            });
+            
+            decimalLat.addEventListener("input", function() { // DDM Degrees input
+                const currentDDMDegrees = parseFloat(this.value) || 0;
+                degreesLat.value = currentDDMDegrees; // Update DMS Degrees
+                b = currentDDMDegrees;
+                // Update DD based on current DDM
+                const currentDDMMinutes = parseFloat(minutesDDLat.value) || 0;
+                ddLati.value = (currentDDMDegrees + (currentDDMMinutes / 60)).toFixed(6);
+            });
+
+            minutesDDLat.addEventListener("input", function() { // DDM Decimal Minutes input
+                const currentDDMMinutes = parseFloat(this.value) || 0;
+                // Update DMS Minutes & Seconds
+                minutesLat.value = parseInt(currentDDMMinutes);
+                secondsLat.value = ((currentDDMMinutes - parseInt(currentDDMMinutes)) * 60).toFixed(2);
+                e = parseInt(currentDDMMinutes);
+                // Update DD based on current DDM
+                const currentDDMDegrees = parseFloat(decimalLat.value) || 0;
+                ddLati.value = (currentDDMDegrees + (currentDDMMinutes / 60)).toFixed(6);
+            });
+
+            ddLati.addEventListener("input", function() { // DD Latitude input
+                const currentDD = parseFloat(this.value) || 0;
+                // Update DMS
+                degreesLat.value = parseInt(currentDD);
+                b = parseInt(currentDD);
+                const remMinutesFromDD = (currentDD - b) * 60;
+                minutesLat.value = parseInt(remMinutesFromDD);
+                e = parseInt(remMinutesFromDD);
+                secondsLat.value = ((remMinutesFromDD - e) * 60).toFixed(2);
+                // Update DDM
+                decimalLat.value = b; // DDM Degrees
+                minutesDDLat.value = remMinutesFromDD.toFixed(4); // DDM Decimal Minutes
+            });
+
+            document.getElementById("clearLatitude").addEventListener("click", function() {
+                degreesLat.value = ""; minutesLat.value = ""; secondsLat.value = "";
+                decimalLat.value = ""; minutesDDLat.value = ""; ddLati.value = "";
+                b = undefined; e = 0;
+            });
+
+            // --- Longitude Event Listeners ---
+            const degreesLon = document.getElementById("degreesLong");
+            const minutesLon = document.getElementById("minutesLong");
+            const secondsLon = document.getElementById("secondsLong");
+            const decimalDdmLon = document.getElementById("decimalDdmLong"); // DDM Degrees
+            const minutesDdmLon = document.getElementById("minutesDdmLong"); // DDM Decimal Minutes
+            const ddLon = document.getElementById("ddLong"); // DD Longitude
+
+            degreesLon.addEventListener("input", function() {
+                g = parseFloat(this.value) || 0;
+                decimalDdmLon.value = g;
+                const currentMinutes = parseFloat(minutesLon.value) || 0;
+                const currentSeconds = parseFloat(secondsLon.value) || 0;
+                ddLon.value = (g + (currentMinutes / 60) + (currentSeconds / 3600)).toFixed(6);
+            });
+
+            minutesLon.addEventListener("input", function() {
+                c = parseFloat(this.value) || 0;
+                const currentSeconds = parseFloat(secondsLon.value) || 0;
+                minutesDdmLon.value = (c + (currentSeconds / 60)).toFixed(4);
+                const currentDegrees = parseFloat(degreesLon.value) || 0;
+                ddLon.value = (currentDegrees + (c / 60) + (currentSeconds / 3600)).toFixed(6);
+            });
+
+            secondsLon.addEventListener("input", function() {
+                const currentSeconds = parseFloat(this.value) || 0;
+                const currentMinutes = parseFloat(minutesLon.value) || 0;
+                minutesDdmLon.value = (currentMinutes + (currentSeconds / 60)).toFixed(4);
+                const currentDegrees = parseFloat(degreesLon.value) || 0;
+                ddLon.value = (currentDegrees + (currentMinutes / 60) + (currentSeconds / 3600)).toFixed(6);
+            });
+
+            decimalDdmLon.addEventListener("input", function() { // DDM Degrees input
+                const currentDDMDegrees = parseFloat(this.value) || 0;
+                degreesLon.value = currentDDMDegrees;
+                g = currentDDMDegrees;
+                const currentDDMMinutes = parseFloat(minutesDdmLon.value) || 0;
+                ddLon.value = (currentDDMDegrees + (currentDDMMinutes / 60)).toFixed(6);
+            });
+            
+            minutesDdmLon.addEventListener("input", function() { // DDM Decimal Minutes input
+                const currentDDMMinutes = parseFloat(this.value) || 0;
+                minutesLon.value = parseInt(currentDDMMinutes);
+                secondsLon.value = ((currentDDMMinutes - parseInt(currentDDMMinutes)) * 60).toFixed(2);
+                c = parseInt(currentDDMMinutes);
+                const currentDDMDegrees = parseFloat(decimalDdmLon.value) || 0;
+                ddLon.value = (currentDDMDegrees + (currentDDMMinutes / 60)).toFixed(6);
+            });
+
+            ddLon.addEventListener("input", function() { // DD Longitude input
+                const currentDD = parseFloat(this.value) || 0;
+                degreesLon.value = parseInt(currentDD);
+                g = parseInt(currentDD);
+                const remMinutesFromDD = (currentDD - g) * 60;
+                minutesLon.value = parseInt(remMinutesFromDD);
+                c = parseInt(remMinutesFromDD);
+                secondsLon.value = ((remMinutesFromDD - c) * 60).toFixed(2);
+                decimalDdmLon.value = g;
+                minutesDdmLon.value = remMinutesFromDD.toFixed(4);
+            });
+
+            document.getElementById("clearLongitude").addEventListener("click", function() {
+                degreesLon.value = ""; minutesLon.value = ""; secondsLon.value = "";
+                decimalDdmLon.value = ""; minutesDdmLon.value = ""; ddLon.value = "";
+                g = undefined; c = 0;
+            });
+        });
+    </script>
+</body>
+</html>
