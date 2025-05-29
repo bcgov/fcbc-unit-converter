@@ -1,0 +1,15 @@
+{
+    # Global options block
+}
+
+:80 {
+    # Set the root directory inside the container where Caddy will serve files from.
+    root * /usr/share/caddy
+
+    # If a requested file isn't found, or if the request is for the root path ('/'),
+    # serve 'unit-converter.html' from the root defined above.
+    try_files {path} /unit-converter.html
+
+    # Enable the static file server.
+    file_server
+}
