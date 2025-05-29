@@ -75,7 +75,7 @@
                     </select>
                 </div>
                 <button onclick="lengthConvert()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert</button>
-                <p id="lengthOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base">Result will appear here</p>
+                <p id="lengthOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base break-all">The Answer will Be Located Here</p>
             </div>
 
             <div class="p-6 bg-gray-50 rounded-lg shadow-md">
@@ -103,7 +103,7 @@
                     </select>
                 </div>
                 <button onclick="areaConvert()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert</button>
-                <p id="AreaOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base">Result will appear here</p>
+                <p id="AreaOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base break-all">The Answer will Be Located Here</p>
             </div>
 
             <div class="p-6 bg-gray-50 rounded-lg shadow-md">
@@ -135,7 +135,7 @@
                     </select>
                 </div>
                 <button onclick="volumeConvert()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert</button>
-                <p id="VolumeOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base">Result will appear here</p>
+                <p id="VolumeOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base break-all">The Answer will Be Located Here</p>
             </div>
 
             <div class="p-6 bg-gray-50 rounded-lg shadow-md">
@@ -205,89 +205,92 @@
                     </select>
                 </div>
                 <button onclick="flowrateConvert()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert</button>
-                <p id="FlowrateOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base">Result will appear here</p>
+                <p id="FlowrateOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base break-all">The Answer will Be Located Here</p>
             </div>
         </div>
 
         <div class="mb-10 sm:mb-16">
-            <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-center text-sky-600">Latitude & Longitude</h2>
-            <p class="text-xs sm:text-sm text-center text-gray-500 mb-6 sm:mb-8"><em>*Only North American coordinates will be correctly converted.</em></p>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-center text-sky-600">Latitude and Longitude</h2>
+            <p class="text-xs sm:text-sm text-center text-gray-500 mb-2"><em>*Only North American coordinates will be correctly converted.</em></p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-6">
                 <div class="p-6 bg-gray-50 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-5 text-sky-700">Latitude (North)</h3>
+                    <h3 class="text-xl font-semibold mb-5 text-sky-700">Latitude</h3>
                     <div class="space-y-4">
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Minute Seconds (DMS)</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Minute Seconds</label>
                             <div class="flex space-x-2 items-center mt-1">
-                                <input id="degrees" placeholder="Deg (0-60)" type="number" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
-                                <input id="minutes" placeholder="Min (0-60)" type="number" step="any" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
-                                <input id="seconds" placeholder="Sec (0-60)" type="number" step="any" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="degrees" placeholder="Degrees(0-60)" type="number" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="minutes" placeholder="Minutes(0-60)" type="number" step="any" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="seconds" placeholder="Seconds(0-60)" type="number" step="any" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <span class="ml-1 text-sm text-gray-600">North</span>
                             </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Decimal Minutes (DDM)</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Decimal Minutes</label>
                             <div class="flex space-x-2 items-center mt-1">
-                                <input id="decimal" placeholder="Deg (0-60)" type="number" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
-                                <input id="minutesDD" placeholder="Dec Min (0-60)" type="number" step="any" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="decimal" placeholder="Degrees(0-60)" type="number" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="minutesDD" placeholder="Decimal Minutes(0-60)" type="number" step="any" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
                             </div>
                         </div>
                         <div>
-                            <label for="ddLati" class="block text-sm font-medium text-gray-700 mb-1">Decimal Degrees (DD)</label>
-                            <input id="ddLati" placeholder="Dec Deg (0-60)" type="number" step="any" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow mt-1">
+                            <label for="ddLati" class="block text-sm font-medium text-gray-700 mb-1">Decimal Degrees</label>
+                            <input id="ddLati" placeholder="Decimal Degree(0-60)" type="number" step="any" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow mt-1">
                         </div>
                     </div>
-                    <button id="clearLatitude" class="mt-6 w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md">Clear Latitude</button>
+                    <button id="clearLatitude" class="mt-6 w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md">Clear</button>
                 </div>
 
                 <div class="p-6 bg-gray-50 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-5 text-sky-700">Longitude (West)</h3>
+                    <h3 class="text-xl font-semibold mb-5 text-sky-700">Longitude</h3>
                     <div class="space-y-4">
                          <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Minute Seconds (DMS)</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Minute Seconds</label>
                             <div class="flex space-x-2 items-center mt-1">
-                                <input id="degreesLong" placeholder="Deg (0-180)" type="number" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
-                                <input id="minutesLong" placeholder="Min (0-60)" type="number" step="any" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
-                                <input id="secondsLong" placeholder="Sec (0-60)" type="number" step="any" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="degreesLong" placeholder="Degrees(0-180)" type="number" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="minutesLong" placeholder="Minutes(0-60)" type="number" step="any" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="secondsLong" placeholder="Seconds(0-60)" type="number" step="any" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <span class="ml-1 text-sm text-gray-600">West</span>
                             </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Decimal Minutes (DDM)</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Decimal Minutes <span class="text-gray-500">(-)</span></label>
                             <div class="flex space-x-2 items-center mt-1">
-                                <input id="decimalDdmLong" placeholder="Deg (0-180)" type="number" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
-                                <input id="minutesDdmLong" placeholder="Dec Min (0-60)" type="number" step="any" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="decimalDdmLong" placeholder="Degrees(0-180)" type="number" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="minutesDdmLong" placeholder="Decimal Minutes(0-60)" type="number" step="any" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
                             </div>
                         </div>
                         <div>
-                            <label for="ddLong" class="block text-sm font-medium text-gray-700 mb-1">Decimal Degrees (DD)</label>
-                            <input id="ddLong" placeholder="Dec Deg (0-180)" type="number" step="any" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow mt-1">
+                            <label for="ddLong" class="block text-sm font-medium text-gray-700 mb-1">Decimal Degrees <span class="text-gray-500">(-)</span></label>
+                            <input id="ddLong" placeholder="Decimal Degrees(0-180)" type="number" step="any" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow mt-1">
                         </div>
                     </div>
-                    <button id="clearLongitude" class="mt-6 w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md">Clear Longitude</button>
+                    <button id="clearLongitude" class="mt-6 w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md">Clear Long</button>
                 </div>
             </div>
         </div>
+        <p class="text-center text-sm text-gray-600 mt-10">
+            Having trouble? Try <a href="https://www.google.ca/chrome/browser/features.html" class="text-sky-600 hover:text-sky-700 underline">Google Chrome</a> or <a href="https://www.mozilla.org/en-US/firefox/new/" class="text-sky-600 hover:text-sky-700 underline">Mozilla Firefox</a>
+        </p>
     </div>
 
     <script>
-        // Standard unit conversion functions
+        // Standard unit conversion functions - to match original output exactly
         function lengthConvert() {
             const inputEl = document.getElementById("lengthInput");
             const fromUnitEl = document.getElementById("length");
             const toUnitEl = document.getElementById("length2");
             const outputEl = document.getElementById("lengthOutput");
 
-            const inputValue = parseFloat(inputEl.value);
+            let inputValue = parseFloat(inputEl.value);
             const fromUnitValue = parseFloat(fromUnitEl.value);
             const fromUnitText = fromUnitEl.options[fromUnitEl.selectedIndex].text;
             const toUnitValue = parseFloat(toUnitEl.value);
             const toUnitText = toUnitEl.options[toUnitEl.selectedIndex].text;
 
-            if (isNaN(inputValue)) {
-                outputEl.innerHTML = "Please enter a valid number.";
-                return;
-            }
-            const result = (inputValue * fromUnitValue) / toUnitValue;
-            outputEl.innerHTML = `${inputValue.toLocaleString()} ${fromUnitText} = ${result.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 5})} ${toUnitText}`;
+            if (isNaN(inputValue)) { inputValue = 0; }
+            const resultNumeric = (inputValue * fromUnitValue) / toUnitValue;
+            const resultString = resultNumeric.toFixed(5);
+            outputEl.innerHTML = inputValue + " " + fromUnitText + "      =     " + resultString + " " + toUnitText;
         }
 
         function areaConvert() {
@@ -296,18 +299,16 @@
             const toUnitEl = document.getElementById("Area2");
             const outputEl = document.getElementById("AreaOutput");
 
-            const inputValue = parseFloat(inputEl.value);
+            let inputValue = parseFloat(inputEl.value);
             const fromUnitValue = parseFloat(fromUnitEl.value);
             const fromUnitText = fromUnitEl.options[fromUnitEl.selectedIndex].text;
             const toUnitValue = parseFloat(toUnitEl.value);
             const toUnitText = toUnitEl.options[toUnitEl.selectedIndex].text;
             
-            if (isNaN(inputValue)) {
-                outputEl.innerHTML = "Please enter a valid number.";
-                return;
-            }
-            const result = (inputValue * fromUnitValue) / toUnitValue;
-            outputEl.innerHTML = `${inputValue.toLocaleString()} ${fromUnitText} = ${result.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 5})} ${toUnitText}`;
+            if (isNaN(inputValue)) { inputValue = 0; }
+            const resultNumeric = (inputValue * fromUnitValue) / toUnitValue;
+            const resultString = resultNumeric.toFixed(5);
+            outputEl.innerHTML = inputValue + " " + fromUnitText + "      =     " + resultString + " " + toUnitText;
         }
 
         function volumeConvert() {
@@ -316,18 +317,16 @@
             const toUnitEl = document.getElementById("Volume2");
             const outputEl = document.getElementById("VolumeOutput");
 
-            const inputValue = parseFloat(inputEl.value);
+            let inputValue = parseFloat(inputEl.value);
             const fromUnitValue = parseFloat(fromUnitEl.value);
             const fromUnitText = fromUnitEl.options[fromUnitEl.selectedIndex].text;
             const toUnitValue = parseFloat(toUnitEl.value);
             const toUnitText = toUnitEl.options[toUnitEl.selectedIndex].text;
 
-            if (isNaN(inputValue)) {
-                outputEl.innerHTML = "Please enter a valid number.";
-                return;
-            }
-            const result = (inputValue * fromUnitValue) / toUnitValue;
-            outputEl.innerHTML = `${inputValue.toLocaleString()} ${fromUnitText} = ${result.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 5})} ${toUnitText}`;
+            if (isNaN(inputValue)) { inputValue = 0; }
+            const resultNumeric = (inputValue * fromUnitValue) / toUnitValue;
+            const resultString = resultNumeric.toFixed(5);
+            outputEl.innerHTML = inputValue + " " + fromUnitText + "      =     " + resultString + " " + toUnitText;
         }
 
         function flowrateConvert() {
@@ -336,179 +335,266 @@
             const toUnitEl = document.getElementById("Flowrate2");
             const outputEl = document.getElementById("FlowrateOutput");
             
-            const inputValue = parseFloat(inputEl.value);
+            let inputValue = parseFloat(inputEl.value);
             const fromUnitValue = parseFloat(fromUnitEl.value);
             const fromUnitText = fromUnitEl.options[fromUnitEl.selectedIndex].text;
             const toUnitValue = parseFloat(toUnitEl.value);
             const toUnitText = toUnitEl.options[toUnitEl.selectedIndex].text;
 
-            if (isNaN(inputValue)) {
-                outputEl.innerHTML = "Please enter a valid number.";
-                return;
-            }
-            const result = (inputValue * fromUnitValue) / toUnitValue;
-            // Using more precision for flowrate as values can be very small
-            outputEl.innerHTML = `${inputValue.toLocaleString()} ${fromUnitText} = ${result.toLocaleString(undefined, {minimumFractionDigits: 0, maximumFractionDigits: 10})} ${toUnitText}`;
+            if (isNaN(inputValue)) { inputValue = 0; }
+            const resultNumeric = (inputValue * fromUnitValue) / toUnitValue;
+            const resultString = resultNumeric.toFixed(5);
+             outputEl.innerHTML = inputValue + " " + fromUnitText + "      =     " + resultString + " " + toUnitText;
         }
 
-        // Latitude and Longitude conversion logic
+        // Latitude and Longitude conversion logic - adjusted for exact original output behavior
         window.addEventListener("load", function() {
-            // State variables for Lat/Long, using original short names to ensure logic matches
-            var b; // Stores latitude degrees for DMS/DDM calculations
-            var e = 0; // Stores latitude minutes for DMS calculations
-            var g; // Stores longitude degrees for DMS/DDM calculations
-            var c = 0; // Stores longitude minutes for DMS calculations
+            var b_lat_deg; 
+            var e_lat_min = 0; 
+            var g_lon_deg; 
+            var c_lon_min = 0; 
 
-            // Helper functions for coordinate conversion
-            function minutesDDM(val) { // Extracts integer minutes from DD
-                return parseInt((val - parseInt(val)) * 60);
-            }
-            function secondsDDm(val) { // Extracts seconds with decimals from DD
-                return ((((val - parseInt(val)) * 60) - parseInt((val - parseInt(val)) * 60)) * 60);
-            }
-
-            // --- Latitude Event Listeners ---
             const degreesLat = document.getElementById("degrees");
             const minutesLat = document.getElementById("minutes");
             const secondsLat = document.getElementById("seconds");
-            const decimalLat = document.getElementById("decimal"); // DDM Degrees
-            const minutesDDLat = document.getElementById("minutesDD"); // DDM Decimal Minutes
-            const ddLati = document.getElementById("ddLati"); // DD Latitude
+            const decimalLat = document.getElementById("decimal"); 
+            const minutesDDLat = document.getElementById("minutesDD"); 
+            const ddLati = document.getElementById("ddLati"); 
 
             degreesLat.addEventListener("input", function() {
-                b = parseFloat(this.value) || 0;
-                decimalLat.value = b;
-                // Update DD based on current DMS
-                const currentMinutes = parseFloat(minutesLat.value) || 0;
-                const currentSeconds = parseFloat(secondsLat.value) || 0;
-                ddLati.value = (b + (currentMinutes / 60) + (currentSeconds / 3600)).toFixed(6);
+                const val = parseFloat(this.value);
+                b_lat_deg = isNaN(val) ? (this.value === '' ? undefined : 0) : val;
+                if (this.value === '') { 
+                    decimalLat.value = '';
+                    ddLati.value = '';
+                    return;
+                }
+                decimalLat.value = this.value; // Keep as string to match original if non-numeric was intended
+                ddLati.value = this.value;     
             });
 
             minutesLat.addEventListener("input", function() {
-                e = parseFloat(this.value) || 0;
-                // Update DDM based on current DMS
-                const currentSeconds = parseFloat(secondsLat.value) || 0;
-                minutesDDLat.value = (e + (currentSeconds / 60)).toFixed(4);
-                // Update DD based on current DMS
-                const currentDegrees = parseFloat(degreesLat.value) || 0;
-                ddLati.value = (currentDegrees + (e / 60) + (currentSeconds / 3600)).toFixed(6);
+                const val = parseFloat(this.value);
+                e_lat_min = isNaN(val) ? (this.value === '' ? 0 : 0) : val;
+                if (this.value === '') { 
+                     minutesDDLat.value = (parseFloat(decimalLat.value) || 0).toString(); // DDM Deg only
+                     if (b_lat_deg !== undefined) ddLati.value = (b_lat_deg || 0).toString(); else ddLati.value = '';
+                     return;
+                }
+                let currentSeconds = parseFloat(secondsLat.value) || 0;
+                minutesDDLat.value = (e_lat_min + (currentSeconds / 60)).toString(); 
+                if (b_lat_deg !== undefined) {
+                     ddLati.value = (b_lat_deg + (e_lat_min / 60) + (currentSeconds / 3600)).toString(); 
+                } else if (this.value !== '' && (parseFloat(decimalLat.value) || 0) !== 0 ) { // If only minutes/seconds are entered
+                    ddLati.value = ((e_lat_min / 60) + (currentSeconds / 3600)).toString();
+                }
             });
 
             secondsLat.addEventListener("input", function() {
                 const currentSeconds = parseFloat(this.value) || 0;
-                // Update DDM based on current DMS
-                const currentMinutes = parseFloat(minutesLat.value) || 0;
-                minutesDDLat.value = (currentMinutes + (currentSeconds / 60)).toFixed(4);
-                // Update DD based on current DMS
-                const currentDegrees = parseFloat(degreesLat.value) || 0;
-                ddLati.value = (currentDegrees + (currentMinutes / 60) + (currentSeconds / 3600)).toFixed(6);
+                 if (this.value === '') { 
+                    minutesDDLat.value = (e_lat_min || 0).toString();
+                    if (b_lat_deg !== undefined) ddLati.value = (b_lat_deg + (e_lat_min / 60)).toString(); 
+                    else ddLati.value = ((e_lat_min / 60)).toString();
+                    return;
+                }
+                minutesDDLat.value = (e_lat_min + (currentSeconds / 60)).toString(); 
+                if (b_lat_deg !== undefined) {
+                    ddLati.value = (b_lat_deg + (e_lat_min / 60) + (currentSeconds / 3600)).toString(); 
+                } else {
+                     ddLati.value = ((e_lat_min / 60) + (currentSeconds / 3600)).toString();
+                }
             });
             
-            decimalLat.addEventListener("input", function() { // DDM Degrees input
-                const currentDDMDegrees = parseFloat(this.value) || 0;
-                degreesLat.value = currentDDMDegrees; // Update DMS Degrees
-                b = currentDDMDegrees;
-                // Update DD based on current DDM
-                const currentDDMMinutes = parseFloat(minutesDDLat.value) || 0;
-                ddLati.value = (currentDDMDegrees + (currentDDMMinutes / 60)).toFixed(6);
+            decimalLat.addEventListener("input", function() { 
+                const val = parseFloat(this.value);
+                b_lat_deg = isNaN(val) ? (this.value === '' ? undefined : 0) : val;
+                 if (this.value === '') {
+                    degreesLat.value = '';
+                    // ddLati might need to be updated based on minutesDDLat if it has a value
+                    let currentDDMMinutes = parseFloat(minutesDDLat.value) || 0;
+                    ddLati.value = (currentDDMMinutes / 60).toString();
+                    return;
+                }
+                degreesLat.value = this.value; 
+                let currentDDMMinutes = parseFloat(minutesDDLat.value) || 0;
+                ddLati.value = ( (b_lat_deg || 0) + (currentDDMMinutes / 60)).toString(); 
             });
 
-            minutesDDLat.addEventListener("input", function() { // DDM Decimal Minutes input
-                const currentDDMMinutes = parseFloat(this.value) || 0;
-                // Update DMS Minutes & Seconds
-                minutesLat.value = parseInt(currentDDMMinutes);
-                secondsLat.value = ((currentDDMMinutes - parseInt(currentDDMMinutes)) * 60).toFixed(2);
-                e = parseInt(currentDDMMinutes);
-                // Update DD based on current DDM
-                const currentDDMDegrees = parseFloat(decimalLat.value) || 0;
-                ddLati.value = (currentDDMDegrees + (currentDDMMinutes / 60)).toFixed(6);
+            minutesDDLat.addEventListener("input", function() { 
+                const currentDDMMinutes = parseFloat(this.value);
+                if (isNaN(currentDDMMinutes) && this.value !== '') { 
+                     minutesLat.value = ''; secondsLat.value = '';
+                     if (b_lat_deg !== undefined) ddLati.value = (b_lat_deg || 0).toString(); else ddLati.value = '';
+                     return;
+                }
+                if (this.value === '') {
+                    minutesLat.value = ''; secondsLat.value = '';
+                    if (b_lat_deg !== undefined) ddLati.value = (b_lat_deg || 0).toString(); else ddLati.value = '';
+                    return;
+                }
+
+                minutesLat.value = parseInt(currentDDMMinutes).toString();
+                e_lat_min = parseInt(currentDDMMinutes);
+                secondsLat.value = ((currentDDMMinutes - e_lat_min) * 60).toString(); 
+                
+                if (b_lat_deg !== undefined) {
+                    ddLati.value = (b_lat_deg + (currentDDMMinutes / 60)).toString(); 
+                } else {
+                     ddLati.value = (currentDDMMinutes / 60).toString();
+                }
             });
 
-            ddLati.addEventListener("input", function() { // DD Latitude input
-                const currentDD = parseFloat(this.value) || 0;
-                // Update DMS
-                degreesLat.value = parseInt(currentDD);
-                b = parseInt(currentDD);
-                const remMinutesFromDD = (currentDD - b) * 60;
-                minutesLat.value = parseInt(remMinutesFromDD);
-                e = parseInt(remMinutesFromDD);
-                secondsLat.value = ((remMinutesFromDD - e) * 60).toFixed(2);
-                // Update DDM
-                decimalLat.value = b; // DDM Degrees
-                minutesDDLat.value = remMinutesFromDD.toFixed(4); // DDM Decimal Minutes
+            ddLati.addEventListener("input", function() { 
+                const currentDD = parseFloat(this.value);
+                 if (isNaN(currentDD) && this.value !== '') { 
+                    degreesLat.value = ''; minutesLat.value = ''; secondsLat.value = '';
+                    decimalLat.value = ''; minutesDDLat.value = '';
+                    return;
+                }
+                 if (this.value === '') {
+                    degreesLat.value = ''; minutesLat.value = ''; secondsLat.value = '';
+                    decimalLat.value = ''; minutesDDLat.value = '';
+                    return;
+                }
+
+                b_lat_deg = parseInt(currentDD); 
+                degreesLat.value = b_lat_deg.toString();
+                decimalLat.value = b_lat_deg.toString(); 
+                
+                const remDecimalPart = currentDD - b_lat_deg;
+                minutesDDLat.value = (remDecimalPart * 60).toString(); 
+
+                e_lat_min = parseInt(remDecimalPart * 60);
+                minutesLat.value = e_lat_min.toString();
+                
+                secondsLat.value = (((remDecimalPart * 60) - e_lat_min) * 60).toFixed(4); 
             });
 
             document.getElementById("clearLatitude").addEventListener("click", function() {
                 degreesLat.value = ""; minutesLat.value = ""; secondsLat.value = "";
                 decimalLat.value = ""; minutesDDLat.value = ""; ddLati.value = "";
-                b = undefined; e = 0;
+                b_lat_deg = undefined; e_lat_min = 0;
             });
 
-            // --- Longitude Event Listeners ---
+            // --- Longitude Event Listeners (similar adjustments) ---
             const degreesLon = document.getElementById("degreesLong");
             const minutesLon = document.getElementById("minutesLong");
             const secondsLon = document.getElementById("secondsLong");
-            const decimalDdmLon = document.getElementById("decimalDdmLong"); // DDM Degrees
-            const minutesDdmLon = document.getElementById("minutesDdmLong"); // DDM Decimal Minutes
-            const ddLon = document.getElementById("ddLong"); // DD Longitude
+            const decimalDdmLon = document.getElementById("decimalDdmLong"); 
+            const minutesDdmLon = document.getElementById("minutesDdmLong"); 
+            const ddLon = document.getElementById("ddLong"); 
 
             degreesLon.addEventListener("input", function() {
-                g = parseFloat(this.value) || 0;
-                decimalDdmLon.value = g;
-                const currentMinutes = parseFloat(minutesLon.value) || 0;
-                const currentSeconds = parseFloat(secondsLon.value) || 0;
-                ddLon.value = (g + (currentMinutes / 60) + (currentSeconds / 3600)).toFixed(6);
+                const val = parseFloat(this.value);
+                g_lon_deg = isNaN(val) ? (this.value === '' ? undefined : 0) : val;
+                 if (this.value === '') { 
+                    decimalDdmLon.value = ''; ddLon.value = ''; return;
+                }
+                decimalDdmLon.value = this.value; 
+                ddLon.value = this.value;     
             });
 
             minutesLon.addEventListener("input", function() {
-                c = parseFloat(this.value) || 0;
-                const currentSeconds = parseFloat(secondsLon.value) || 0;
-                minutesDdmLon.value = (c + (currentSeconds / 60)).toFixed(4);
-                const currentDegrees = parseFloat(degreesLon.value) || 0;
-                ddLon.value = (currentDegrees + (c / 60) + (currentSeconds / 3600)).toFixed(6);
+                const val = parseFloat(this.value);
+                c_lon_min = isNaN(val) ? (this.value === '' ? 0 : 0) : val;
+                if (this.value === '') {
+                     minutesDdmLon.value = (parseFloat(decimalDdmLon.value) || 0).toString();
+                     if (g_lon_deg !== undefined) ddLon.value = (g_lon_deg || 0).toString(); else ddLon.value = '';
+                     return;
+                }
+                let currentSeconds = parseFloat(secondsLon.value) || 0;
+                minutesDdmLon.value = (c_lon_min + (currentSeconds / 60)).toString(); 
+                if (g_lon_deg !== undefined) {
+                     ddLon.value = (g_lon_deg + (c_lon_min / 60) + (currentSeconds / 3600)).toString(); 
+                } else {
+                    ddLon.value = ((c_lon_min / 60) + (currentSeconds / 3600)).toString();
+                }
             });
 
             secondsLon.addEventListener("input", function() {
                 const currentSeconds = parseFloat(this.value) || 0;
-                const currentMinutes = parseFloat(minutesLon.value) || 0;
-                minutesDdmLon.value = (currentMinutes + (currentSeconds / 60)).toFixed(4);
-                const currentDegrees = parseFloat(degreesLon.value) || 0;
-                ddLon.value = (currentDegrees + (currentMinutes / 60) + (currentSeconds / 3600)).toFixed(6);
+                if (this.value === '') {
+                    minutesDdmLon.value = (c_lon_min || 0).toString();
+                    if (g_lon_deg !== undefined) ddLon.value = (g_lon_deg + (c_lon_min / 60)).toString(); 
+                    else ddLon.value = ((c_lon_min / 60)).toString();
+                    return;
+                }
+                minutesDdmLon.value = (c_lon_min + (currentSeconds / 60)).toString(); 
+                if (g_lon_deg !== undefined) {
+                    ddLon.value = (g_lon_deg + (c_lon_min / 60) + (currentSeconds / 3600)).toString(); 
+                } else {
+                     ddLon.value = ((c_lon_min / 60) + (currentSeconds / 3600)).toString();
+                }
             });
 
-            decimalDdmLon.addEventListener("input", function() { // DDM Degrees input
-                const currentDDMDegrees = parseFloat(this.value) || 0;
-                degreesLon.value = currentDDMDegrees;
-                g = currentDDMDegrees;
-                const currentDDMMinutes = parseFloat(minutesDdmLon.value) || 0;
-                ddLon.value = (currentDDMDegrees + (currentDDMMinutes / 60)).toFixed(6);
+            decimalDdmLon.addEventListener("input", function() { 
+                const val = parseFloat(this.value);
+                g_lon_deg = isNaN(val) ? (this.value === '' ? undefined : 0) : val;
+                if (this.value === '') {
+                    degreesLon.value = ''; 
+                    let currentDDMMinutes = parseFloat(minutesDdmLon.value) || 0;
+                    ddLon.value = (currentDDMMinutes / 60).toString();
+                    return;
+                }
+                degreesLon.value = this.value; 
+                let currentDDMMinutes = parseFloat(minutesDdmLon.value) || 0;
+                ddLon.value = ((g_lon_deg || 0) + (currentDDMMinutes / 60)).toString(); 
             });
             
-            minutesDdmLon.addEventListener("input", function() { // DDM Decimal Minutes input
-                const currentDDMMinutes = parseFloat(this.value) || 0;
-                minutesLon.value = parseInt(currentDDMMinutes);
-                secondsLon.value = ((currentDDMMinutes - parseInt(currentDDMMinutes)) * 60).toFixed(2);
-                c = parseInt(currentDDMMinutes);
-                const currentDDMDegrees = parseFloat(decimalDdmLon.value) || 0;
-                ddLon.value = (currentDDMDegrees + (currentDDMMinutes / 60)).toFixed(6);
+            minutesDdmLon.addEventListener("input", function() { 
+                const currentDDMMinutes = parseFloat(this.value);
+                if (isNaN(currentDDMMinutes) && this.value !== '') {
+                     minutesLon.value = ''; secondsLon.value = '';
+                     if (g_lon_deg !== undefined) ddLon.value = (g_lon_deg || 0).toString(); else ddLon.value = '';
+                     return;
+                }
+                if (this.value === '') {
+                    minutesLon.value = ''; secondsLon.value = '';
+                     if (g_lon_deg !== undefined) ddLon.value = (g_lon_deg || 0).toString(); else ddLon.value = '';
+                    return;
+                }
+                minutesLon.value = parseInt(currentDDMMinutes).toString();
+                c_lon_min = parseInt(currentDDMMinutes);
+                secondsLon.value = ((currentDDMMinutes - c_lon_min) * 60).toString(); 
+                
+                if (g_lon_deg !== undefined) {
+                    ddLon.value = (g_lon_deg + (currentDDMMinutes / 60)).toString(); 
+                } else {
+                    ddLon.value = (currentDDMMinutes / 60).toString();
+                }
             });
 
-            ddLon.addEventListener("input", function() { // DD Longitude input
-                const currentDD = parseFloat(this.value) || 0;
-                degreesLon.value = parseInt(currentDD);
-                g = parseInt(currentDD);
-                const remMinutesFromDD = (currentDD - g) * 60;
-                minutesLon.value = parseInt(remMinutesFromDD);
-                c = parseInt(remMinutesFromDD);
-                secondsLon.value = ((remMinutesFromDD - c) * 60).toFixed(2);
-                decimalDdmLon.value = g;
-                minutesDdmLon.value = remMinutesFromDD.toFixed(4);
+            ddLon.addEventListener("input", function() { 
+                const currentDD = parseFloat(this.value);
+                if (isNaN(currentDD) && this.value !== '') {
+                    degreesLon.value = ''; minutesLon.value = ''; secondsLon.value = '';
+                    decimalDdmLon.value = ''; minutesDdmLon.value = '';
+                    return;
+                }
+                if (this.value === '') {
+                    degreesLon.value = ''; minutesLon.value = ''; secondsLon.value = '';
+                    decimalDdmLon.value = ''; minutesDdmLon.value = '';
+                    return;
+                }
+
+                g_lon_deg = parseInt(currentDD); 
+                degreesLon.value = g_lon_deg.toString();
+                decimalDdmLon.value = g_lon_deg.toString(); 
+                
+                const remDecimalPart = currentDD - g_lon_deg;
+                minutesDdmLon.value = (remDecimalPart * 60).toString(); 
+
+                c_lon_min = parseInt(remDecimalPart * 60);
+                minutesLon.value = c_lon_min.toString();
+                
+                secondsLon.value = (((remDecimalPart * 60) - c_lon_min) * 60).toFixed(4); 
             });
 
             document.getElementById("clearLongitude").addEventListener("click", function() {
                 degreesLon.value = ""; minutesLon.value = ""; secondsLon.value = "";
                 decimalDdmLon.value = ""; minutesDdmLon.value = ""; ddLon.value = "";
-                g = undefined; c = 0;
+                g_lon_deg = undefined; c_lon_min = 0;
             });
         });
     </script>
