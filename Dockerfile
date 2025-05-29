@@ -23,8 +23,8 @@ RUN mkdir -p /data/caddy /config/caddy && \
     chmod g+r /etc/caddy/Caddyfile && \
     # Ensure the directory Caddy serves from is readable by all.
     chmod -R o+r /usr/share/caddy && \
-    # Ensure the Caddy binary and entrypoint are executable by "others"
-    chmod o+x /usr/bin/caddy /usr/bin/docker-entrypoint.sh
+    # Ensure the Caddy binary itself is executable by "others" (this should be the case by default, but explicit is fine)
+    chmod o+x /usr/bin/caddy
 
 # Revert to the 'caddy' user. OpenShift will likely override the UID portion
 # but will respect the GID 0 (root) for group permissions set above.
