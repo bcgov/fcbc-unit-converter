@@ -8,7 +8,8 @@ COPY Caddyfile /etc/caddy/Caddyfile
 COPY src/html/unit-converter.html /usr/share/caddy/unit-converter.html
 
 # --- OpenShift Permission Adjustments ---
-USER root # Switch to root temporarily to change ownership and permissions.
+# Switch to root temporarily to change ownership and permissions.
+USER root
 
 # Caddy's default data dir is /data, config dir is /config.
 # Caddy's default workdir is /srv.
@@ -16,14 +17,13 @@ USER root # Switch to root temporarily to change ownership and permissions.
 # We need to ensure these are usable by OpenShift's arbitrary UID (which is in GID 0).
 RUN mkdir -p /data/caddy /config/caddy && \
     chgrp -R 0 /data /config /etc/caddy /srv && \
-    chmod -R g+rX /data /config /etc/caddy /srv && \ # Group read + execute(for dirs)
-    chmod -R g+w /data /config /srv && \ # Add group write for dirs Caddy might write to
+    chmod -R g+rX /data /config /etc/caddy /srv && \
+    chmod -R g+w /data /config /srv && \
     # Ensure the Caddyfile itself is group-readable
     chmod g+r /etc/caddy/Caddyfile && \
     # Ensure the directory Caddy serves from is readable by all.
     chmod -R o+r /usr/share/caddy && \
-    # Ensure the Caddy binary and entrypoint are executable by "others" (which covers the arbitrary UID).
-    # The base image usually has this, but an explicit o+x is a safeguard.
+    # Ensure the Caddy binary and entrypoint are executable by "others"
     chmod o+x /usr/bin/caddy /usr/bin/docker-entrypoint.sh
 
 # Revert to the 'caddy' user. OpenShift will likely override the UID portion
