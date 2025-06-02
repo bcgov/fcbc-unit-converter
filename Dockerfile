@@ -15,7 +15,7 @@ RUN chmod g+rwx /usr/bin/caddy /srv /etc/caddy/ /config/caddy/ && \
 COPY Caddyfile /etc/caddy/Caddyfile
 
 # Step 3: Copy your HTML file
-COPY src/html/unit-converter.html /usr/share/caddy/unit-converter.html
+COPY frontend/src/html/unit-converter.html /usr/share/caddy/unit-converter.html
 
 RUN caddy fmt --overwrite /etc/caddy/Caddyfile
 RUN caddy validate -c /etc/caddy/Caddyfile
