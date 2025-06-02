@@ -8,7 +8,7 @@ The FCBC Unit Converter is a frontend application designed to provide a user-fri
 
 ## Features
 
-* **Multiple Unit Categories:** Supports conversions for various types of units (e.g., length, weight, temperature, volume - *please verify and update based on actual categories available in the app*).
+* **Multiple Unit Categories:** Supports conversions for various types of units (e.g., length, weight, temperature, volume).
 * **User-Friendly Interface:** Clean and intuitive design for easy input and clear display of results.
 * **Real-time Conversion:** Converts values instantly as the user types.
 * **Responsive Design:** Adapts to different screen sizes for use on desktops, tablets, and mobile devices.
@@ -25,8 +25,6 @@ The FCBC Unit Converter is a frontend application designed to provide a user-fri
 ## Getting Started / Usage
 
 To use the unit converter, simply open the `index.html` file in your web browser.
-
-Alternatively, if the project is hosted (e.g., on GitHub Pages or another hosting service), provide the direct URL here:
 
 * **Live Demo:** [https://unit-converter-dabb52-dev.apps.silver.devops.gov.bc.ca/]
 
