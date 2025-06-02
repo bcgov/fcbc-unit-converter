@@ -24,7 +24,7 @@ The FCBC Unit Converter is a frontend application designed to provide a user-fri
 
 ## Getting Started / Usage
 
-To use the unit converter, simply open the `index.html` file in your web browser.
+To use the unit converter, simply open the `unit-converter.html` file in your web browser.
 
 * **Live Demo:** [https://unit-converter-dabb52-dev.apps.silver.devops.gov.bc.ca/]
 
@@ -35,8 +35,8 @@ To use the unit converter, simply open the `index.html` file in your web browser
     git clone [https://github.com/bcgov/fcbc-unit-converter.git](https://github.com/bcgov/fcbc-unit-converter.git)
     cd fcbc-unit-converter
     ```
-2.  **Open `index.html`:**
-    Navigate to the project directory and open the `index.html` file in your preferred web browser.
+2.  **Open `unit-converter.html`:**
+    Navigate to the project directory and open the `unit-converter.html` file in your preferred web browser.
 
 **Running with Docker (locally):**
 
