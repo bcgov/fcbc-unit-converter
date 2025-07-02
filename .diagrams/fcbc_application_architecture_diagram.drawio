@@ -1,0 +1,96 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0" version="27.1.6">
+  <diagram name="Page-1" id="UGRNyi8nmHwrfW589kiI">
+    <mxGraphModel dx="1226" dy="727" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-1" value="OpenShift Cluster" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="200" y="600" width="491" height="819" as="geometry" />
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-2" value="C" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="240" y="938" width="411" height="431" as="geometry" />
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-3" value="P" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="220" y="913" width="451" height="481" as="geometry" />
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-4" value="Docker Image" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="260" y="963" width="371" height="381" as="geometry" />
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-5" value="Internet" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="254" y="310" width="350" height="236" as="geometry" />
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-6" value="End User" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="411" y="335" width="123" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-7" value="External Web Page &#xa; (https://portalext.nrs.gov.bc.ca/)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="289" y="443" width="222" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-8" value="Route &#xa; (https://unit-converter-dabb52-prod.apps.silver.devops.gov.bc.ca/)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="343" y="625" width="260" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-9" value="Service &#xa; (port 80/443)" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="320" y="781" width="157" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-10" value="Caddy Web Server" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="303" y="988" width="189" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-11" value="Application Files &#xa; (unit-converter.html)" style="strokeWidth=2;whiteSpace=wrap;direction=west;" vertex="1" parent="1">
+          <mxGeometry x="361.5" y="1096" width="223" height="223" as="geometry" />
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-12" value="1. Clicks a link" style="curved=1;startArrow=none;endArrow=block;exitX=0.21;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="kBzPQ8xyjSCkr8DS_E6f-6" target="kBzPQ8xyjSCkr8DS_E6f-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="416" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-13" value="2. Link points to FCBC Unit Converter" style="curved=1;startArrow=none;endArrow=block;exitX=0.5;exitY=1;entryX=0.31;entryY=0;rounded=0;" edge="1" parent="1" source="kBzPQ8xyjSCkr8DS_E6f-7" target="kBzPQ8xyjSCkr8DS_E6f-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="600" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-14" value="3. Forwards traffic" style="curved=1;startArrow=none;endArrow=block;exitX=0.31;exitY=1;entryX=0.5;entryY=0;rounded=0;" edge="1" parent="1" source="kBzPQ8xyjSCkr8DS_E6f-8" target="kBzPQ8xyjSCkr8DS_E6f-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="398" y="754" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-15" value="6. HTML sent back to user" style="curved=1;startArrow=none;endArrow=block;entryX=0.69;entryY=1;rounded=0;" edge="1" parent="1" target="kBzPQ8xyjSCkr8DS_E6f-8">
+          <mxGeometry x="-0.0785" y="8" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="548" y="1069" />
+              <mxPoint x="548" y="754" />
+            </Array>
+            <mxPoint x="480" y="1190" as="sourcePoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-16" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.69;exitY=0;entryX=0.8;entryY=1;rounded=0;" edge="1" parent="1" source="kBzPQ8xyjSCkr8DS_E6f-8" target="kBzPQ8xyjSCkr8DS_E6f-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="546" y="600" />
+              <mxPoint x="546" y="416" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-17" value="4. Selects Pod" style="curved=1;startArrow=none;endArrow=block;rounded=0;" edge="1" parent="1" source="kBzPQ8xyjSCkr8DS_E6f-9" target="kBzPQ8xyjSCkr8DS_E6f-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-19" value="5. Caddy serves files" style="curved=1;startArrow=none;endArrow=block;rounded=0;" edge="1" parent="1" source="kBzPQ8xyjSCkr8DS_E6f-2" target="kBzPQ8xyjSCkr8DS_E6f-11">
+          <mxGeometry x="-1" y="-24" relative="1" as="geometry">
+            <Array as="points" />
+            <mxPoint x="6" y="-29" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="kBzPQ8xyjSCkr8DS_E6f-20" value="FrontCounter BC Unit Converter Application Architecture" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="269" y="188" width="320" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
