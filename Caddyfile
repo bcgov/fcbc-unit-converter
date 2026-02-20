@@ -1,12 +1,12 @@
 {
-    # Tell Caddy to use port 8080 as its default HTTP listening port internally
     http_port 8080
-    # If you were planning on automatic HTTPS (not typical for single page on OpenShift like this)
-    # you might also set https_port 4430 or similar, but http_port is key here.
 }
 
-# This site block will now listen on the http_port defined above (8080)
 :8080 {
+    log {
+        output stdout
+        format json
+    }
     root * /usr/share/caddy
     try_files {path} /unit-converter.html
     file_server
