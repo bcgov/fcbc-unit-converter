@@ -7,6 +7,9 @@
         output stdout
         format json
     }
+    @robots {
+        path /robots.txt
+    }
     root * /usr/share/caddy
     try_files {path} /unit-converter.html
     file_server
