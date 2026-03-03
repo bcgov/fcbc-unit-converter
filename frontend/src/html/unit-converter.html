@@ -45,44 +45,48 @@
             <div class="p-6 bg-gray-50 rounded-lg shadow-md">
                 <h3 class="text-xl font-semibold mb-5 text-sky-700">Length</h3>
                 <div class="mb-4">
-                    <label for="lengthInput" class="block text-sm font-medium text-gray-700 mb-1">Enter Value:</label>
-                    <input id="lengthInput" placeholder="Enter Value Here" type="number" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                    <label for="lengthInput" class="block text-sm font-medium text-gray-700 mb-1">Enter value:</label>
+                    <input id="lengthInput" placeholder="Enter value here" type="number"
+                        class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
                 </div>
                 <div class="mb-4">
                     <label for="length" class="block text-sm font-medium text-gray-700 mb-1">From:</label>
                     <select id="length" class="w-full p-2.5 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
-                        <option value="0.01">Centimeters</option>
+                        <option value="0.01">Centimetres</option>
                         <option value="0.3048">Feet</option>
                         <option value="0.0254">Inches</option>
-                        <option value="1000">Kilometers</option>
-                        <option value="1" selected>Meters</option>
+                        <option value="1000">Kilometres</option>
+                        <option value="1" selected>Metres</option>
                         <option value="1609.344">Miles</option>
-                        <option value="0.001">Millimeter</option>
+                        <option value="0.001">Millimetres</option>
                         <option value="0.9144">Yards</option>
                     </select>
                 </div>
                 <div class="mb-4">
                     <label for="length2" class="block text-sm font-medium text-gray-700 mb-1">To:</label>
                     <select id="length2" class="w-full p-2.5 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
-                        <option value="0.01">Centimeters</option>
+                        <option value="0.01">Centimetres</option>
                         <option value="0.3048" selected>Feet</option>
                         <option value="0.0254">Inches</option>
-                        <option value="1000">Kilometers</option>
-                        <option value="1">Meters</option>
+                        <option value="1000">Kilometres</option>
+                        <option value="1">Metres</option>
                         <option value="1609.344">Miles</option>
-                        <option value="0.001">Millimeter</option>
+                        <option value="0.001">Millimetres</option>
                         <option value="0.9144">Yards</option>
                     </select>
                 </div>
-                <button onclick="lengthConvert()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert</button>
+                <button onclick="lengthConvert()"
+                    class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert
+                    length</button>
                 <p id="lengthOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base break-all"></p>
             </div>
 
             <div class="p-6 bg-gray-50 rounded-lg shadow-md">
                 <h3 class="text-xl font-semibold mb-5 text-sky-700">Area</h3>
                 <div class="mb-4">
-                    <label for="AreaInput" class="block text-sm font-medium text-gray-700 mb-1">Enter Value:</label>
-                    <input id="AreaInput" placeholder="Enter Value Here" type="number" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                    <label for="AreaInput" class="block text-sm font-medium text-gray-700 mb-1">Enter value:</label>
+                    <input id="AreaInput" placeholder="Enter value here" type="number"
+                        class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
                 </div>
                 <div class="mb-4">
                     <label for="Area" class="block text-sm font-medium text-gray-700 mb-1">From:</label>
@@ -90,7 +94,7 @@
                         <option value="4046.8564224" selected>Acres</option>
                         <option value="10000">Hectares</option>
                         <option value="0.09290304">Square Feet</option>
-                        <option value="1">Square Meters</option>
+                        <option value="1">Square Metres</option>
                     </select>
                 </div>
                 <div class="mb-4">
@@ -99,50 +103,56 @@
                         <option value="4046.8564224">Acres</option>
                         <option value="10000" selected>Hectares</option>
                         <option value="0.09290304">Square Feet</option>
-                        <option value="1">Square Meters</option>
+                        <option value="1">Square Metres</option>
                     </select>
                 </div>
-                <button onclick="areaConvert()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert</button>
+                <button onclick="areaConvert()"
+                    class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert
+                    area</button>
                 <p id="AreaOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base break-all"></p>
             </div>
 
             <div class="p-6 bg-gray-50 rounded-lg shadow-md">
                 <h3 class="text-xl font-semibold mb-5 text-sky-700">Volume</h3>
                 <div class="mb-4">
-                    <label for="VolumeInput" class="block text-sm font-medium text-gray-700 mb-1">Enter Value:</label>
-                    <input id="VolumeInput" placeholder="Enter Value Here" type="number" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                    <label for="VolumeInput" class="block text-sm font-medium text-gray-700 mb-1">Enter value:</label>
+                    <input id="VolumeInput" placeholder="Enter value here" type="number"
+                        class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
                 </div>
                 <div class="mb-4">
                     <label for="Volume" class="block text-sm font-medium text-gray-700 mb-1">From:</label>
                     <select id="Volume" class="w-full p-2.5 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
                         <option value="1233.48185532" selected>Acre Feet</option>
-                        <option value="1">Cubic Meters</option>
+                        <option value="1">Cubic Metres</option>
                         <option value="0.003785411784">Gallons [US]</option>
                         <option value="0.00454609">Gallons [Imperial]</option>
                         <option value="0.001">Litres</option>
-                        <option value="0.000001">Milliliters</option>
+                        <option value="0.000001">Millilitres</option>
                     </select>
                 </div>
                 <div class="mb-4">
                     <label for="Volume2" class="block text-sm font-medium text-gray-700 mb-1">To:</label>
                     <select id="Volume2" class="w-full p-2.5 border border-gray-300 rounded-md bg-white focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
                         <option value="1233.48185532">Acre Feet</option>
-                        <option value="1" selected>Cubic Meters</option>
+                        <option value="1" selected>Cubic Metres</option>
                         <option value="0.003785411784">Gallons [US]</option>
                         <option value="0.00454609">Gallons [Imperial]</option>
                         <option value="0.001">Litres</option>
-                        <option value="0.000001">Milliliters</option>
+                        <option value="0.000001">Millilitres</option>
                     </select>
                 </div>
-                <button onclick="volumeConvert()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert</button>
+                <button onclick="volumeConvert()"
+                    class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert
+                    volume</button>
                 <p id="VolumeOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base break-all"></p>
             </div>
 
             <div class="p-6 bg-gray-50 rounded-lg shadow-md">
                 <h3 class="text-xl font-semibold mb-5 text-sky-700">Flowrate</h3>
                 <div class="mb-4">
-                    <label for="FlowrateInput" class="block text-sm font-medium text-gray-700 mb-1">Enter Value:</label>
-                    <input id="FlowrateInput" placeholder="Enter Value Here" type="number" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                    <label for="FlowrateInput" class="block text-sm font-medium text-gray-700 mb-1">Enter value:</label>
+                    <input id="FlowrateInput" placeholder="Enter value here" type="number"
+                        class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
                 </div>
                 <div class="mb-4">
                     <label for="Flowrate" class="block text-sm font-medium text-gray-700 mb-1">From:</label>
@@ -152,11 +162,11 @@
                         <option value="0.34263384444">Acre Feet/Hour</option>
                         <option value="20.55803066666667">Acre Feet/Minute</option>
                         <option value="1233.48184">Acre Feet/Second</option>
-                        <option value="3.16880767e-8">Cubic Meters/Year</option>
-                        <option value="0.00001157407">Cubic Meters/Day</option>
-                        <option value="0.00027777777">Cubic Meters/Hour</option>
-                        <option value="0.01666666666">Cubic Meters/Minute</option>
-                        <option value="1">Cubic Meters/Second</option>
+                        <option value="3.16880767e-8">Cubic Metres/Year</option>
+                        <option value="0.00001157407">Cubic Metres/Day</option>
+                        <option value="0.00027777777">Cubic Metres/Hour</option>
+                        <option value="0.01666666666">Cubic Metres/Minute</option>
+                        <option value="1">Cubic Metres/Second</option>
                         <option value="1.440569e-10">Gallon/Year [Imperial]</option>
                         <option value="5.26167824e-8">Gallon/Day [Imperial]</option>
                         <option value="0.0000012628">Gallon/Hour [Imperial]</option>
@@ -182,11 +192,11 @@
                         <option value="0.34263384444">Acre Feet/Hour</option>
                         <option value="20.55803066666667">Acre Feet/Minute</option>
                         <option value="1233.48184">Acre Feet/Second</option>
-                        <option value="3.16880767e-8">Cubic Meters/Year</option>
-                        <option value="0.00001157407" selected>Cubic Meters/Day</option>
-                        <option value="0.00027777777">Cubic Meters/Hour</option>
-                        <option value="0.01666666666">Cubic Meters/Minute</option>
-                        <option value="1">Cubic Meters/Second</option>
+                        <option value="3.16880767e-8">Cubic Metres/Year</option>
+                        <option value="0.00001157407" selected>Cubic Metres/Day</option>
+                        <option value="0.00027777777">Cubic Metres/Hour</option>
+                        <option value="0.01666666666">Cubic Metres/Minute</option>
+                        <option value="1">Cubic Metres/Second</option>
                         <option value="1.440569e-10">Gallon/Year [Imperial]</option>
                         <option value="5.26167824e-8">Gallon/Day [Imperial]</option>
                         <option value="0.0000012628">Gallon/Hour [Imperial]</option>
@@ -204,7 +214,9 @@
                         <option value="0.001">Litre/Second</option>
                     </select>
                 </div>
-                <button onclick="flowrateConvert()" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert</button>
+                <button onclick="flowrateConvert()"
+                    class="w-full bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md mb-4">Convert
+                    flowrate</button>
                 <p id="FlowrateOutput" class="mt-4 p-3 bg-sky-50 text-sky-700 rounded-md min-h-[50px] flex items-center justify-center text-center text-sm sm:text-base break-all"></p>
             </div>
         </div>
@@ -217,7 +229,7 @@
                     <h3 class="text-xl font-semibold mb-5 text-sky-700">Latitude</h3>
                     <div class="space-y-4">
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Minute Seconds</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree-minute-seconds</label>
                             <div class="flex space-x-2 items-center mt-1">
                                 <input id="degrees" placeholder="Degrees(0-60)" type="number" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
                                 <input id="minutes" placeholder="Minutes(0-60)" type="number" step="any" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
@@ -226,25 +238,29 @@
                             </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Decimal Minutes</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree-decimal-minutes</label>
                             <div class="flex space-x-2 items-center mt-1">
                                 <input id="decimal" placeholder="Degrees(0-60)" type="number" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
-                                <input id="minutesDD" placeholder="Decimal Minutes(0-60)" type="number" step="any" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="minutesDD" placeholder="Decimal minutes(0-60)" type="number" step="any"
+                                    class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
                             </div>
                         </div>
                         <div>
-                            <label for="ddLati" class="block text-sm font-medium text-gray-700 mb-1">Decimal Degrees</label>
-                            <input id="ddLati" placeholder="Decimal Degree(0-60)" type="number" step="any" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow mt-1">
+                            <label for="ddLati" class="block text-sm font-medium text-gray-700 mb-1">Decimal degrees</label>
+                            <input id="ddLati" placeholder="Decimal degrees(0-60)" type="number" step="any"
+                                class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow mt-1">
                         </div>
                     </div>
-                    <button id="clearLatitude" class="mt-6 w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md">Clear</button>
+                    <button id="clearLatitude"
+                        class="mt-6 w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md">Clear
+                        latitude</button>
                 </div>
 
                 <div class="p-6 bg-gray-50 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold mb-5 text-sky-700">Longitude</h3>
                     <div class="space-y-4">
                          <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Minute Seconds</label>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree-minute-seconds</label>
                             <div class="flex space-x-2 items-center mt-1">
                                 <input id="degreesLong" placeholder="Degrees(0-180)" type="number" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
                                 <input id="minutesLong" placeholder="Minutes(0-60)" type="number" step="any" class="flex-1 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
@@ -253,18 +269,24 @@
                             </div>
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree Decimal Minutes <span class="text-gray-500">(-)</span></label>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Degree-decimal-minutes<span
+                                    class="text-gray-500">(-)</span></label>
                             <div class="flex space-x-2 items-center mt-1">
                                 <input id="decimalDdmLong" placeholder="Degrees(0-180)" type="number" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
-                                <input id="minutesDdmLong" placeholder="Decimal Minutes(0-60)" type="number" step="any" class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
+                                <input id="minutesDdmLong" placeholder="Decimal minutes(0-60)" type="number" step="any"
+                                    class="w-1/2 min-w-0 p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow">
                             </div>
                         </div>
                         <div>
-                            <label for="ddLong" class="block text-sm font-medium text-gray-700 mb-1">Decimal Degrees <span class="text-gray-500">(-)</span></label>
-                            <input id="ddLong" placeholder="Decimal Degrees(0-180)" type="number" step="any" class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow mt-1">
+                            <label for="ddLong" class="block text-sm font-medium text-gray-700 mb-1">Decimal degrees <span
+                                    class="text-gray-500">(-)</span></label>
+                            <input id="ddLong" placeholder="Decimal degrees(0-180)" type="number" step="any"
+                                class="w-full p-2.5 border border-gray-300 rounded-md focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow mt-1">
                         </div>
                     </div>
-                    <button id="clearLongitude" class="mt-6 w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md">Clear Long</button>
+                    <button id="clearLongitude"
+                        class="mt-6 w-full bg-red-500 hover:bg-red-600 text-white font-semibold py-2.5 px-4 rounded-md transition duration-150 ease-in-out shadow hover:shadow-md">Clear
+                        longitude</button>
                 </div>
             </div>
         </div>
